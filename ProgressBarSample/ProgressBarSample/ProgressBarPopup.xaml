@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             x:Class="ProgressBarSample.ProgressBarPopup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <Frame VerticalOptions="CenterAndExpand" HorizontalOptions="Center" CornerRadius="10" 
+           Margin="20" Padding="20" HeightRequest="150">
+        <StackLayout Margin="20" VerticalOptions="CenterAndExpand">
+            <Label Text="Progress Bar" FontSize="Large" FontAttributes="Bold"/>
+            <ProgressBar ProgressColor="Green" HeightRequest="20" 
+                         WidthRequest="400" x:Name="progressbar"/>
+            <Label Text="" HorizontalOptions="EndAndExpand" x:Name="progressLabel" FontAttributes="Bold" FontSize="Medium"/>
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>
